@@ -1,0 +1,118 @@
+/* Styling untuk navbar-section */
+.navbar-section {
+  background-color: #333;
+  width: 100%; /* Membuat navbar lebar penuh */
+}
+
+.navbar {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Membuat container navbar lebar penuh */
+}
+
+.logo a {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease; /* Animasi perubahan warna */
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Posisi garis di bawah teks */
+  width: 0;
+  height: 2px;
+  background-color: white; /* Warna garis */
+  transition: width 0.3s ease; /* Animasi panjang garis */
+}
+
+.nav-links a:hover {
+  color: #ffcc00; /* Warna teks saat hover */
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Garis memanjang penuh saat hover */
+}
+
+.navbar-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.navbar-icons i {
+  margin-right: 8px;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%; /* Memastikan navbar lebar penuh di bawah */
+    text-align: center;
+  }
+
+  .navbar-icons {
+    display: none;
+    flex-direction: column;
+    width: 100%; /* Memastikan ikon navbar lebar penuh di bawah */
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .hamburger {
+    display: flex; /* Menampilkan hamburger hanya pada layar kecil */
+  }
+
+  /* Toggle navbar menu */
+  .nav-links.active,
+  .navbar-icons.active {
+    display: flex;
+  }
+}

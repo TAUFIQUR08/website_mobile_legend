@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda - Opeks Store</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+    <link rel="stylesheet" href="beranda.css" />
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
+
+  <body>
+  
+    <!-- Navbar Section -->
+    <section class="navbar-section">
+        <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+            <a href="#">Opeks Store</a>
+            </div>
+    
+            <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+            </div>
+    
+            <ul class="nav-links">
+            <li><a href="beranda.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+    
+            <div class="navbar-icons">
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i>Keranjang</a>
+            <a href="login.html"><i class="fas fa-user"></i>User</a>
+            </div>
+        </div>
+        </nav>
+    </section>
+
+    <!-- Carousel Container -->
+    <section class="banner-custom">
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <img src="foto game/ml.jpg" alt="Slide 1" />
+            <img src="foto game/26f18577e90460da6c019ace5c9673d1.jpg" alt="Slide 2" />
+        </div>
+
+        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+        <span class="next" onclick="changeSlide(1)">&#10095;</span>
+
+        <div class="dots">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="card-custom">
+      
+        <div class="card">
+          <a href="mobile_legends.html"><img src="foto game/ml-icon.jpg" alt="Mobile Legends" /></a>
+          <div class="card-info">
+            <p class="card-title">Mobile Legends</p>
+          </div>
+          <div class="price-tag">$1</div>
+        </div>
+
+        <div class="card">
+          <a href="Free_Fire.html"><img src="foto game/ff-icon.jpg" alt="Free Fire" /></a>
+          <div class="card-info">
+            <p class="card-title">Free Fire</p>
+          </div>
+          <div class="price-tag">$1</div>
+        </div> </div>
+    </section>
+
+   <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Auto-slide every 3 seconds
+  let autoSlide = setInterval(() => changeSlide(1), 3000);
+
+  function changeSlide(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+    // Reset the auto-slide timer when manually changing slides
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => changeSlide(1), 3000);
+  }
+
+  function showSlides(n) {
+    let i;
+    const slides = document.querySelectorAll(".carousel-slide img");
+    const dots = document.querySelectorAll(".dot");
+
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+</script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.querySelector(".hamburger");
+          const navLinks = document.querySelector(".nav-links");
+          const navbarIcons = document.querySelector(".navbar-icons");
+      
+          hamburger.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+            navbarIcons.classList.toggle("active");
+          });
+        });
+      </script>
+      
+  </body>
+</html>

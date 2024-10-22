@@ -1,0 +1,180 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #2C2C2C;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Styling untuk game-info */
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 90%; /* Sama dengan Mobile Legends */
+    max-width: 1000px; /* Batas maksimal lebar */
+}
+
+.game-logo img {
+    width: 80px;
+    border-radius: 5px;
+}
+
+.game-details {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.game-details h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.game-details p {
+    font-size: 1rem;
+    color: #B5B5B5;
+    margin-top: 5px;
+}
+
+.icons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.icon-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.icon-item img {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.icon-item span {
+    font-size: 0.9rem;
+    color: #FFF;
+}
+
+/* Step Container */
+.step-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 90%; /* Sama dengan Mobile Legends */
+    max-width: 1000px; /* Batas maksimal lebar */
+    text-align: center;
+}
+
+.step-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.input-container input {
+    background-color: #444;
+    border: 1px solid #555;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    width: 60%;
+    text-align: center;
+}
+
+.input-container span {
+    color: #FFF;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 30%;
+}
+
+/* Add some styling to the description below the input */
+.step-container p {
+    font-size: 0.9rem;
+    color: #B5B5B5;
+    margin-top: 10px;
+}
+
+/* Item Container */
+.item-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.item {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.item p {
+    color: #FFF;
+    font-size: 1rem;
+}
+
+.popular {
+    background-color: #6A1B9A;
+}
+
+/* Payment Container */
+.payment-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.payment-container button {
+    background-color: #444;
+    color: #FFF;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Confirm Button */
+.confirm-btn {
+    background-color: #6A1B9A;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.confirm-btn:hover {
+    background-color: #8A1FBA; /* Slight hover effect */
+}
